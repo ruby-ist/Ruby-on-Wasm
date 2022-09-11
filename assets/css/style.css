@@ -1,11 +1,23 @@
 body{
     background: #f0e7e9;
-    padding: 15vh 8vw;
+    padding: 18vh 8vw 15vh;
+}
+
+nav{
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    padding: 2rem 4rem;
+}
+
+#logo{
+    width: 80px;
 }
 
 #run{
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -32,6 +44,19 @@ textarea, #output, code{
     overflow: auto;
     font-size: 1em;
     tab-size: 4;
+}
+
+::placeholder {
+    color: #929181;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #929181;
+}
+
+::-ms-input-placeholder {
+    color: #929181;
 }
 
 pre code.hljs{
@@ -65,4 +90,37 @@ code{
 
 textarea:focus {
     outline: none;
+}
+
+/* svg logo style*/
+.cls-1 {
+    fill: #cd0000;
+}
+
+.cls-2 {
+    fill: #f77274;
+}
+
+.cls-3 {
+    fill: #7b0000;
+}
+
+.cls-4 {
+    fill: #fa191d;
+}
+
+.cls-5 {
+    fill: #8f0000;
+}
+
+.cls-6 {
+    fill: #fff;
+}
+
+.cls-7 {
+    fill: #654fef;
+}
+
+.cls-8 {
+    fill: #16213e;
 }
