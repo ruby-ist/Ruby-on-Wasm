@@ -1,17 +1,33 @@
 body{
     background: #f0e7e9;
-    padding: 15vh 10vw;
+    padding: 15vh 8vw;
+}
+
+#run{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+.eight.wide.column{
+    position: relative;
+    height: 80vh;
 }
 
 textarea, #output, code{
-    height: 80vh;
+    height: 70vh;
     width: 39vw;
     padding: 5%;
     border: none;
     line-height: 1.4285em;
     border-radius: 10px;
     position: absolute;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: monospace;
     overflow: auto;
     font-size: 1em;
@@ -36,6 +52,7 @@ textarea{
 
 #output{
     background: #22221b;
+    color: limegreen;
 }
 
 code{

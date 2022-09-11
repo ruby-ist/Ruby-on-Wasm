@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/ruby-head-wasm-wasi@latest/dist/browser.umd.js"></script>
+    <script src="/assets/js/ruby-wasm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/ruby.min.js" ></script>
+    <button onclick="run()" id="run" class="ui red icon button">
+        <i class="play icon"></i>
+        Run
+    </button>
     <div class="ui grid">
         <div class="eight wide column">
             <label for="editor"></label>
@@ -26,6 +30,7 @@
             <div id="output"></div>
         </div>
     </div>
-    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/code-editor.js"></script>
+    <script src="/assets/js/interpreter.js"></script>
 </body>
 </html>
