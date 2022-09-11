@@ -3,21 +3,47 @@ body{
     padding: 15vh 10vw;
 }
 
-textarea, #output{
+textarea, #output, code{
     height: 80vh;
     width: 39vw;
-    padding: 4%;
+    padding: 5%;
     border: none;
+    line-height: 1.4285em;
     border-radius: 10px;
+    position: absolute;
+    top: 0;
+    font-family: monospace;
+    overflow: auto;
+    font-size: 1em;
+    tab-size: 4;
+}
+
+pre code.hljs{
+    padding: 5%;
+}
+
+pre{
+    margin: 0;
 }
 
 textarea{
-    background: #392f36;
-    color: aliceblue;
+    background: transparent;
+    z-index: 1;
+    color: transparent;
+    caret-color: limegreen;
+    resize: none;
 }
 
 #output{
-    background: #31272e;
+    background: #22221b;
+}
+
+code{
+    z-index: 0;
+}
+
+.hljs{
+    background: #392f36;
 }
 
 textarea:focus{
