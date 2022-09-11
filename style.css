@@ -1,0 +1,25 @@
+body{
+    background: #f0e7e9;
+    padding: 15vh 10vw;
+}
+
+textarea, #output{
+    height: 80vh;
+    width: 39vw;
+    padding: 4%;
+    border: none;
+    border-radius: 10px;
+}
+
+textarea{
+    background: #392f36;
+    color: aliceblue;
+}
+
+#output{
+    background: #31272e;
+}
+
+textarea:focus{
+    outline: none;
+}
