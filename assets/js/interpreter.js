@@ -19,3 +19,8 @@ function run(){
     const result = rubyVM.eval(code);
     output.innerText = output.innerText + `${result.toString()}`;
 }
+
+document.body.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.code === "KeyR")
+        run();
+});

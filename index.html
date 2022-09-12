@@ -33,25 +33,32 @@
             </g>
         </svg>
         <div class="ui secondary right menu">
-            <button class="ui inverted violet labeled icon button">
+            <button onclick="share()" class="ui inverted violet labeled icon button">
                 <i class="share alternate icon"></i>
                 Share
-            </button><button class="ui inverted green labeled icon button">
+            </button>
+            <button onclick="clearConsole()" class="ui inverted green labeled icon button">
                 <i class="terminal icon"></i>
                 Clear console
             </button>
         </div>
     </nav>
     <div class="buttons">
-        <button class="ui black button">
+        <button onclick="clearEditor()" class="ui black button">
             <i class="times icon"></i>
             Clear
         </button>
-        <button onclick="run()" id="run" class="ui red button">
+        <button id="run"
+                class="ui red button"
+                onclick="run()"
+                data-inverted=""
+                data-variation="basic mini"
+                data-position="bottom center"
+                data-tooltip="shortcut: ^R">
             <i class="play icon"></i>
             Run
         </button>
-        <button class="ui black button">
+        <button onclick="copyCode()" class="ui black button">
             <i class="copy icon"></i>
             Copy
         </button>
@@ -82,5 +89,6 @@
     <script src="/assets/js/gsap-animations.js"></script>
     <script src="/assets/js/code-editor.js"></script>
     <script src="/assets/js/interpreter.js"></script>
+    <script src="/assets/js/button-functions.js"></script>
 </body>
 </html>

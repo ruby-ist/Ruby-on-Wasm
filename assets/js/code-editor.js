@@ -1,4 +1,5 @@
 hljs.highlightAll();
+document.querySelector('#editor').focus();
 
 function highLight(text) {
     let editor = document.querySelector("#code");
