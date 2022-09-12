@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/atelier-estuary.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark-dimmed.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
@@ -42,6 +42,24 @@
                 <i class="terminal icon"></i>
                 Clear console
             </button>
+        </div>
+
+        <div id="mobile-menu" class="ui mini labeled icon menu">
+            <a onclick="clearEditor()" class="item">
+                <i class="broom icon"></i>
+                Clear
+            </a>
+            <a onclick="copyCode()" class="item">
+                <i class="copy icon"></i>
+                Copy
+            </a>
+            <a onclick="share()" class="item">
+                <i class="violet share alternate icon"></i>
+                Share
+            </a>
+        </div>
+        <div id="hamburger" onclick="toggleMenu()" class="item">
+            <i id="menu-icon" class="big bars link icon"></i>
         </div>
     </nav>
     <div class="buttons">

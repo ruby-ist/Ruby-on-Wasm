@@ -17,7 +17,6 @@ function run(){
     let output = document.querySelector('#output');
     output.innerText = "";
     const result = rubyVM.eval(code);
-    output.innerText = output.innerText + `${result.toString()}`;
 }
 
 document.body.addEventListener('keydown', (e) => {

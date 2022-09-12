@@ -1,6 +1,6 @@
 body{
     background: #f0e7e9;
-    padding: 15vh 8vw 15vh;
+    padding: 18vh 8vw 15vh;
 }
 
 nav.ui.menu{
@@ -16,7 +16,7 @@ nav.ui.menu{
 
 #logo{
     width: 80px;
-    rotate: 15deg;
+    transform: rotateZ(15deg);
 }
 
 .buttons{
@@ -64,16 +64,16 @@ textarea, #output, code{
 }
 
 ::placeholder {
-    color: #929181;
+    color: #adbac7;
     opacity: 1;
 }
 
 :-ms-input-placeholder {
-    color: #929181;
+    color:#adbac7;
 }
 
 ::-ms-input-placeholder {
-    color: #929181;
+    color: #adbac7;
 }
 
 pre code.hljs{
@@ -109,14 +109,18 @@ textarea:focus {
     outline: none;
 }
 
+.ui.labeled.icon.menu{
+    display: none;
+}
+
+#hamburger{
+    display: none;
+}
+
 footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
     text-align: center;
     color: #d30001;
-    padding-bottom: 30px;
+    padding: 30px;
     font-family: 'Cutive Mono', monospace;
     font-size: 1.2rem;
 }
@@ -156,11 +160,11 @@ footer{
 
 @media screen and (max-width: 540px) {
     body{
-        height: 100vh;
+        min-height: 100vh;
     }
 
     nav.ui.menu{
-        padding: 20px;
+        padding: 20px 10px 20px 20px;
     }
 
     .secondary.menu button{
@@ -172,7 +176,7 @@ footer{
     }
 
     .column{
-        height: 39vh !important;
+        height: 320px !important;
     }
 
     textarea, #output, #code{
@@ -190,7 +194,7 @@ footer{
 
     .buttons{
         left: initial;
-        top: 70px;
+        top: 85px;
         right: -7.5%;
     }
 
@@ -198,7 +202,35 @@ footer{
         display: block !important;
     }
 
+    .ui.labeled.icon.menu{
+        display: flex;
+        background: #f0e7e9  !important;
+        border: none;
+        box-shadow: none !important;
+    }
+
+    .ui.labeled.icon.menu .item{
+        min-width: 4rem;
+    }
+
+    #mobile-menu{
+        scale: 0;
+    }
+
+    .ui.menu .item{
+        padding: 0.5rem;
+    }
+
+    .ui.menu .item::before{
+        background: transparent;
+    }
+
+    #hamburger{
+        display: block;
+    }
+
     footer{
         font-size: 1rem;
+        padding-bottom: 3rem;
     }
 }

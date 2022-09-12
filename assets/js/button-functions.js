@@ -1,3 +1,5 @@
+let menuOpened = false;
+
 function clearEditor(){
     let editor = document.querySelector('#editor');
     let code = document.querySelector('#code');
@@ -35,5 +37,27 @@ async function share(){
         } catch (e) {
             alert("Unable to share the website");
         }
+    }
+}
+
+async function toggleMenu(){
+    let menuIcon = document.querySelector('#menu-icon');
+    if(!menuOpened) {
+        gsap.from('#mobile-menu', {
+            scaleX: 0,
+            transformOrigin: "right",
+        });
+        menuIcon.classList.remove('bars');
+        menuIcon.classList.add('arrow', 'right');
+        menuOpened = true;
+    } else {
+        await gsap.to('#mobile-menu', {
+            scaleX: 0,
+            transformOrigin: "right"
+        });
+        document.querySelector('#mobile-menu').setAttribute('style', '')
+        menuIcon.classList.remove('arrow', 'right');
+        menuIcon.classList.add('bars');
+        menuOpened = false;
     }
 }
