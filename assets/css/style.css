@@ -1,7 +1,6 @@
 body{
     background: #f0e7e9;
     padding: 15vh 8vw 15vh;
-    overflow: hidden;
 }
 
 nav.ui.menu{
@@ -113,7 +112,7 @@ textarea:focus {
 footer{
     position: absolute;
     bottom: 0;
-    left: -0;
+    left: 0;
     width: 100vw;
     text-align: center;
     color: #d30001;
@@ -153,4 +152,53 @@ footer{
 
 .cls-8 {
     fill: #16213e;
+}
+
+@media screen and (max-width: 540px) {
+    body{
+        height: 100vh;
+    }
+
+    nav.ui.menu{
+        padding: 20px;
+    }
+
+    .secondary.menu button{
+        display: none;
+    }
+
+    #logo{
+        width: 60px;
+    }
+
+    .column{
+        height: 39vh !important;
+    }
+
+    textarea, #output, #code{
+        width: 90%;
+        height: 90%;
+    }
+
+    #output{
+        top: 45%;
+    }
+
+    .buttons button{
+        display: none !important;
+    }
+
+    .buttons{
+        left: initial;
+        top: 70px;
+        right: -7.5%;
+    }
+
+    #run{
+        display: block !important;
+    }
+
+    footer{
+        font-size: 1rem;
+    }
 }
