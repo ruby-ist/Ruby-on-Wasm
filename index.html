@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ruby on Wasm</title>
+    <title>Ruby on WASM</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/atelier-estuary.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
-    <nav>
+    <nav class="ui menu">
         <svg id="logo" onclick="logoAnimate()" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.49418 284.82143">
             <g id="ruby">
                 <path class="cls-1" d="M467.853,475.76534c-.32067.62819-.63393,1.30293-1.231.196-1.11877-1.61943-1.39653-3.55542-2.007-5.364-5.56446-16.48682-10.81476-33.07665-16.2534-49.6049-5.81065-17.65883-11.52711-35.34886-17.2994-53.02052-5.875-17.986-11.68263-35.994-17.59687-53.96734-.93009-2.82649-1.80517-5.67336-2.69678-8.51352-.297-.946-.64449-2.00419.8356-2.37635a10.16311,10.16311,0,0,1,2.37525-.16385q54.89648-.00925,109.7857-.0088a3.44713,3.44713,0,0,0,2.4519-1.82166q8.4485-12.37588,16.90738-24.74471c9.28915-13.6032,18.58012-27.2053,28.05724-40.67886.46408-.65979.741-1.62948,1.85715-1.5369q8.78818,12.22551,17.5724,24.45388,15.38964,21.5328,30.72662,43.10317c.41706.58623,1.1402,1.05327,1.017,1.93821a6.38507,6.38507,0,0,1-3.66524.585q-44.75531.00484-89.51061.00263c-3.77814,0-3.78141.00018-4.97223,3.57328Q497.26322,388.66246,470.298,469.50159A35.38353,35.38353,0,0,1,467.853,475.76534Z" transform="translate(-312.2769 -225.33687)"/>
@@ -30,11 +32,30 @@
                 <path class="cls-8" d="M621.33472,347.10425q-1.24485-3.20151-2.48963-6.40305a58.474,58.474,0,0,0,5.35608-21.80569c1.04175-23.63867-13.22168-40.963-18.87109-47.82471a88.88333,88.88333,0,0,0-17.3786-16.10826q-3.35962-4.70853-6.7193-9.41707a91.11195,91.11195,0,0,1,27.86938,22.24262c5.73615,6.843,21.26471,25.368,20.09375,51.35253A65.52869,65.52869,0,0,1,621.33472,347.10425Z" transform="translate(-312.2769 -225.33687)"/>
             </g>
         </svg>
+        <div class="ui secondary right menu">
+            <button class="ui inverted violet labeled icon button">
+                <i class="share alternate icon"></i>
+                Share
+            </button><button class="ui inverted green labeled icon button">
+                <i class="terminal icon"></i>
+                Clear console
+            </button>
+        </div>
     </nav>
-    <button onclick="run()" id="run" class="ui red icon button">
-        <i class="play icon"></i>
-        Run
-    </button>
+    <div class="buttons">
+        <button class="ui black button">
+            <i class="times icon"></i>
+            Clear
+        </button>
+        <button onclick="run()" id="run" class="ui red button">
+            <i class="play icon"></i>
+            Run
+        </button>
+        <button class="ui black button">
+            <i class="copy icon"></i>
+            Copy
+        </button>
+    </div>
     <div class="ui grid">
         <div class="eight wide column">
             <label for="editor"></label>
@@ -51,6 +72,9 @@
             <div id="output"></div>
         </div>
     </div>
+    <footer>
+        Copyright © Sriram V 2022
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/ruby.min.js" ></script>

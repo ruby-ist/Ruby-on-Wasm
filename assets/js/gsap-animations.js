@@ -18,8 +18,10 @@ function logoAnimate(){
     }).from('#tag', {
         scale: 0,
         transformOrigin: "top center",
-        delay: -0.1
+        delay: -0.1,
+        duration: 0.5
     }).from('#line', {
+        scale: 0.95,
         opacity: 0,
         duration: 1
     });

@@ -1,27 +1,45 @@
 body{
     background: #f0e7e9;
-    padding: 18vh 8vw 15vh;
+    padding: 15vh 8vw 15vh;
+    overflow: hidden;
 }
 
-nav{
+nav.ui.menu{
     position: absolute;
     width: 100vw;
     top: 0;
     left: 0;
     padding: 2rem 4rem;
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
 }
 
 #logo{
     width: 80px;
+    rotate: 15deg;
 }
 
-#run{
+.buttons{
     position: absolute;
     top: 80px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
     z-index: 2;
+}
+
+.ui.button{
+    margin: auto 10px;
+    padding: 10px 20px;
+}
+
+
+.secondary.menu .ui.button{
+    padding: 10px 15px 10px 50px !important;
+}
+
+#run{
+    padding: 10px 20px;
 }
 
 .eight.wide.column{
@@ -90,6 +108,18 @@ code{
 
 textarea:focus {
     outline: none;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: -0;
+    width: 100vw;
+    text-align: center;
+    color: #d30001;
+    padding-bottom: 30px;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.2rem;
 }
 
 /* svg logo style*/
