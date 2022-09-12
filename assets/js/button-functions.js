@@ -42,7 +42,9 @@ async function share(){
 
 async function toggleMenu(){
     let menuIcon = document.querySelector('#menu-icon');
+    let menu = document.querySelector('#mobile-menu')
     if(!menuOpened) {
+        gsap.set('#mobile-menu', {opacity: 1})
         gsap.from('#mobile-menu', {
             scaleX: 0,
             transformOrigin: "right",
@@ -53,9 +55,10 @@ async function toggleMenu(){
     } else {
         await gsap.to('#mobile-menu', {
             scaleX: 0,
+            opacity: 0,
             transformOrigin: "right"
         });
-        document.querySelector('#mobile-menu').setAttribute('style', '')
+        menu.setAttribute('style', '')
         menuIcon.classList.remove('arrow', 'right');
         menuIcon.classList.add('bars');
         menuOpened = false;

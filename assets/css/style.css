@@ -161,6 +161,7 @@ footer{
 @media screen and (max-width: 540px) {
     body{
         min-height: 100vh;
+        padding-top: 125px;
     }
 
     nav.ui.menu{
@@ -214,7 +215,7 @@ footer{
     }
 
     #mobile-menu{
-        scale: 0;
+        opacity: 0;
     }
 
     .ui.menu .item{
