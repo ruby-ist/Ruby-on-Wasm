@@ -15,8 +15,14 @@ main();
 function run(){
     let code = document.querySelector('#code').innerText;
     let output = document.querySelector('#output');
+    output.style.color = "limegreen";
     output.innerText = "";
-    const result = rubyVM.eval(code);
+    try{
+        rubyVM.eval(code);
+    } catch (error) {
+        output.style.color = "#d30001";
+        output.innerText = error.message;
+    }
 }
 
 document.body.addEventListener('keydown', (e) => {

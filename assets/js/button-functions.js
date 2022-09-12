@@ -1,4 +1,5 @@
 let menuOpened = false;
+let copyButtons = document.querySelectorAll('.copy-btn');
 
 function clearEditor(){
     let editor = document.querySelector('#editor');
@@ -12,6 +13,9 @@ async function copyCode(){
     let code = document.querySelector('#code').innerText;
     try{
         await navigator.clipboard.writeText(code);
+        copyButtons.forEach((button) => {
+            button.innerHTML = `<i class="copy icon"></i> Copied!`;
+        })
     } catch (e) {
         alert("Unable to copy the code!");
     }
@@ -64,3 +68,10 @@ async function toggleMenu(){
         menuOpened = false;
     }
 }
+
+document.querySelector('#editor')
+    .addEventListener('focus', () => {
+        copyButtons.forEach((button) => {
+            button.innerHTML = `<i class="copy icon"></i> Copy`;
+        })
+    });

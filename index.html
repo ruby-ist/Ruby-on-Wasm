@@ -46,10 +46,10 @@
 
         <div id="mobile-menu" class="ui mini labeled icon menu">
             <a onclick="clearEditor()" class="item">
-                <i class="broom icon"></i>
+                <i class="times icon"></i>
                 Clear
             </a>
-            <a onclick="copyCode()" class="item">
+            <a onclick="copyCode()" class="item copy-btn">
                 <i class="copy icon"></i>
                 Copy
             </a>
@@ -77,7 +77,7 @@
             <i class="play icon"></i>
             Run
         </button>
-        <button onclick="copyCode()" class="ui black button">
+        <button onclick="copyCode()" class="ui black button copy-btn">
             <i class="copy icon"></i>
             Copy
         </button>
@@ -89,7 +89,7 @@
                       oninput="highLight(this.value); sync_scroll(this);"
                       onscroll="sync_scroll(this);"
                       onkeydown="check_tab(this, event);"
-                      placeholder="puts RUBY_VERSION"
+                      placeholder="# puts RUBY_VERSION"
                       spellcheck="false"
                       autocomplete="off"></textarea>
             <pre><code id="code" class="language-rb"></code></pre>

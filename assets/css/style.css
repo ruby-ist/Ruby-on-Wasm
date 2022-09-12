@@ -47,12 +47,12 @@ nav.ui.menu{
 }
 
 textarea, #output, code{
-    height: 70vh;
+    height: 69vh;
     width: 39vw;
     padding: 5%;
     border: none;
     line-height: 1.4285em;
-    border-radius: 10px;
+    border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -120,7 +120,7 @@ textarea:focus {
 footer{
     text-align: center;
     color: #d30001;
-    padding: 30px;
+    padding: 5px 30px 30px;
     font-family: 'Cutive Mono', monospace;
     font-size: 1.2rem;
 }
@@ -160,12 +160,11 @@ footer{
 
 @media screen and (max-width: 540px) {
     body{
-        min-height: 100vh;
         padding-top: 125px;
     }
 
     nav.ui.menu{
-        padding: 20px 10px 20px 20px;
+        padding: 25px 10px 20px 20px;
     }
 
     .secondary.menu button{
