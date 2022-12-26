@@ -6,7 +6,12 @@ const main = async () => {
     const module = await WebAssembly.compile(buffer);
     const {vm} = await DefaultRubyVM(module);
 
-    vm.printVersion();
+    if(vm !== undefined) {
+        document.querySelector('#output').innerText = "";
+        vm.printVersion();
+    } else{
+        document.querySelector('#output').innerText = "Internal Error !!";
+    }
     rubyVM = vm;
 };
 
