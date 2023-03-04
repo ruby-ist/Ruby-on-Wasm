@@ -31,6 +31,8 @@ function run(){
 }
 
 document.body.addEventListener('keydown', (e) => {
-    if (e.ctrlKey && e.code === "KeyR")
+    if ((e.metaKey || e.ctrlKey) && e.code === "KeyR") {
+        e.preventDefault();
         run();
+    }
 });
